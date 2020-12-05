@@ -10,13 +10,23 @@ for i in range(no_of_lines):
     high = int(limits[1])
     letter = line[1][0]
     word = line[2]
-    # count letter occurences
     tmp = 0
-    for l in word:
-    	if l == letter:
-    		tmp += 1
-    if tmp >= low and tmp <= high:
-    	count +=1
+    # part 1
+
+    # count letter occurences
+    # for l in word:
+    # 	if l == letter:
+    # 		tmp += 1
+    # if tmp >= low and tmp <= high:
+    # 	count +=1
+
+    # part 2
+    if word[low-1] == letter:
+        tmp += 1
+    if word[high-1] == letter:
+        tmp += 1
+    if tmp == 1:
+        count += 1
 print ("# of valid passwords: ")
 print (count)
 
